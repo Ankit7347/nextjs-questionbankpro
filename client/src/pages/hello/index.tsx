@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import Loading from "../loading";
 
 const data = [
@@ -3126,12 +3127,14 @@ const data = [
 export default function Page() {
   return (
     <div className="container">
-      <Loading/>
+      <Suspense fallback={<Loading/>}>
       {data.map((content) => (
-        <div className="card">
+        <div className="card" key={content._id}>
           {content.name}
         </div>
       ))}
+      </Suspense>
+      
     </div>
   );
 }

@@ -6,10 +6,10 @@ import type { AppProps } from 'next/app'
 //   return <Component {...pageProps} />
 // }
 
+// {/* <PrimarySearchAppBar/> */}
 export default function App({ Component, pageProps }: AppProps) {
   return(
     <div>
-      {/* <PrimarySearchAppBar/> */}
       <Component {...pageProps} />
     </div>
     ) 
