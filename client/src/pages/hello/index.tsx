@@ -3125,8 +3125,9 @@ const data = [
 ]
 
 export default function Page() {
+  // throw Error("new error")
   return (
-    <div className="container">
+      <div className="container">
       <Suspense fallback={<Loading/>}>
       {data.map((content) => (
         <div className="card" key={content._id}>
